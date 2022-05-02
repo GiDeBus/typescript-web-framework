@@ -1,4 +1,4 @@
-import Eventing from './Eventing';
+import { Eventing } from './Eventing';
 import Sync from './Sync';
 import Attributes from "./Attributes";
 
