@@ -1,4 +1,4 @@
-import { Eventing } from './Eventing';
+import Eventing from './Eventing';
 import Sync from './Sync';
 import Attributes from "./Attributes";
 
@@ -17,5 +17,17 @@ export default class User<UserConfig> {
 
   constructor(attrs: UserConfig) { 
     this.attributes = new Attributes<UserConfig>(attrs);
+  }
+
+  get on() { 
+    return this.events.on;
+  }
+
+  get trigger() { 
+    return this.events.trigger;
+  }
+
+  get get() { 
+    return this.attributes.get;
   }
 }
